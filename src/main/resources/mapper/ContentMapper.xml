@@ -30,14 +30,14 @@
         <trim prefix="(" suffix=")" suffixOverrides=",">
             title, titlePic, slug, created, content, authorId,
             type, status, tags, categories, hits, commentsNum, allowComment,
-            allowPing, allowFeed,
+            allowPing, allowFeed,imgUrl,
         </trim>
         <trim prefix="VALUES(" suffix=")" suffixOverrides=",">
             #{title, jdbcType=VARCHAR}, #{titlePic, jdbcType=VARCHAR}, #{slug, jdbcType=VARCHAR}, UNIX_TIMESTAMP(NOW()),
             #{content, jdbcType=LONGVARCHAR}, #{authorId, jdbcType=INTEGER},
             #{type, jdbcType=VARCHAR}, #{status, jdbcType=VARCHAR}, #{tags, jdbcType=VARCHAR},
             #{categories, jdbcType=VARCHAR}, #{hits, jdbcType=INTEGER}, #{commentsNum, jdbcType=INTEGER},
-            #{allowComment, jdbcType=INTEGER}, #{allowPing, jdbcType=INTEGER}, #{allowFeed, jdbcType=INTEGER},
+            #{allowComment, jdbcType=INTEGER}, #{allowPing, jdbcType=INTEGER}, #{allowFeed, jdbcType=INTEGER}, #{imgUrl, jdbcType=INTEGER},
         </trim>
     </insert>
 
@@ -92,6 +92,9 @@
             </if>
             <if test="allowFeed != null">
                 allowFeed = #{allowFeed, jdbcType=INTEGER},
+            </if>
+            <if test="imgUrl != null">
+                imgUrl = #{imgUrl, jdbcType=INTEGER},
             </if>
         </set>
         WHERE cid = #{cid, jdbcType=INTEGER}

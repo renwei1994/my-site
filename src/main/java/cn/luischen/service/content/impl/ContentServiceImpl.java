@@ -14,6 +14,7 @@ import cn.luischen.model.ContentDomain;
 import cn.luischen.model.RelationShipDomain;
 import cn.luischen.service.content.ContentService;
 import cn.luischen.service.meta.MetaService;
+import cn.luischen.utils.Commons;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
@@ -62,16 +63,7 @@ public class ContentServiceImpl implements ContentService {
         //标签和分类
         String tags = contentDomain.getTags();
         String categories = contentDomain.getCategories();
-
-
-
-
-
-
-
-
         contentDao.addArticle(contentDomain);
-
         int cid = contentDomain.getCid();
         metaService.addMetas(cid, tags, Types.TAG.getType());
         metaService.addMetas(cid, categories, Types.CATEGORY.getType());
