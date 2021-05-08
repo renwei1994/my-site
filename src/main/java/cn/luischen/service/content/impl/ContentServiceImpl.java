@@ -63,6 +63,13 @@ public class ContentServiceImpl implements ContentService {
         String tags = contentDomain.getTags();
         String categories = contentDomain.getCategories();
 
+
+
+
+
+
+
+
         contentDao.addArticle(contentDomain);
 
         int cid = contentDomain.getCid();

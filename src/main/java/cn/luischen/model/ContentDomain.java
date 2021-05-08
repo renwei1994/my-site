@@ -75,7 +75,10 @@ public class ContentDomain {
      * 允许出现在聚合中
      */
     private Integer allowFeed;
-
+    /**
+     * 列表图片
+     */
+    private String imgUrl;
 
 
     public Integer getCid() {
@@ -168,6 +171,14 @@ public class ContentDomain {
 
     public String getCategories() {
         return categories;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public void setCategories(String categories) {

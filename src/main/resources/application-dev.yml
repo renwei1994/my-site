@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8087
 
 
 spring:
@@ -12,7 +12,7 @@ spring:
           filters: stat
           driver-class-name: com.mysql.jdbc.Driver
           #基本属性
-          url: jdbc:mysql://127.0.0.1:3306/my_site?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+          url: jdbc:mysql://106.12.20.140:3306/my_site?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&verifyServerCertificate=false
           username: root
           password: Rw@19940912
           #配置初始化大小/最小/最大
@@ -69,8 +69,8 @@ swagger:
   show: true
 
 qiniu:
-  accesskey: ""
-  serectkey: ""
-  bucket: ""
+  accesskey: "DbK27qJC2m_Gf5q045oaXuCYwuhqaAF5PVs6PtUF"
+  serectkey: "B2hRfZey1xLL62eM_mGgCra1VLt7C22jOgVNfKVv"
+  bucket: "rwstudyfile"
   cdn:
-    url: ""
+    url: "http://qiniu.renwei520.cn/"
